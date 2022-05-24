@@ -14,12 +14,14 @@ public class US001_TC04_Login_WroUser_CorPasw {
          * USER STORY 001 - Login Functionality for NextBaseCRM
          *
          *  Test Cases 04
-         *  Login with null credentials
+         *  Login with Wrong Username and Correct Password
          *
          *
          *  Steps:
          *      Given I am on Authorization Page
-         *      When I click Login button
+         *      When I enter Wrong username
+         *      And I enter Correct password
+         *      And I click Login button
          *      Then I should see note: Incorrect login or password
          */
 
@@ -44,7 +46,8 @@ public class US001_TC04_Login_WroUser_CorPasw {
 
         //7.1. Navigate to LoginBox & input username from the List:
             // Login Box for username
-            WebElement LoginBox = driver.findElement(By.xpath("//*[@id=\"login-popup\"]/form/div[1]/div[1]/input"));
+            //WebElement LoginBox = driver.findElement(By.xpath("//*[@id=\"login-popup\"]/form/div[1]/div[1]/input"));
+            WebElement LoginBox = driver.findElement(By.cssSelector("input[type='text']"));
             //find the Login Box
             action.moveToElement(LoginBox).click().perform();
             // Select All & Delete
@@ -56,7 +59,8 @@ public class US001_TC04_Login_WroUser_CorPasw {
 
         //7.2. Navigate to PasswordBox & input password:
             // Password Box for password
-            WebElement PasswordBox = driver.findElement(By.xpath("//*[@id=\"login-popup\"]/form/div[1]/div[2]/input"));
+            //WebElement PasswordBox = driver.findElement(By.xpath("//*[@id=\"login-popup\"]/form/div[1]/div[2]/input"));
+            WebElement PasswordBox = driver.findElement(By.cssSelector("input[type='password']"));
             // move to password
             action.click(PasswordBox).doubleClick().sendKeys(Keys.DELETE).perform();
             Utility.waitFor(3);
@@ -64,7 +68,8 @@ public class US001_TC04_Login_WroUser_CorPasw {
 
         //7.3. Navigate to Login Button & click()
             // Login Button
-            WebElement LoginBttn = driver.findElement(By.xpath("//*[@id=\"login-popup\"]/form/div[2]/input"));
+            //WebElement LoginBttn = driver.findElement(By.xpath("//*[@id=\"login-popup\"]/form/div[2]/input"));
+            WebElement LoginBttn = driver.findElement(By.cssSelector("input.login-btn"));
             // click()
             action.click(LoginBttn).perform();
             Utility.waitFor(3);

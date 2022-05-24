@@ -7,18 +7,21 @@ public class Login_Credentials {
     public static void main(String[] args) {
 
         //1.ArrayList for Correct usernames
-        ArrayList<String> cor_UsernameList = new ArrayList<>();
+        ArrayList<String> UsernameList = new ArrayList<>();
 
-            cor_UsernameList.add("helpdesk29@cybertekschool.com");
-            cor_UsernameList.add("helpdesk30@cybertekschool.com");
+        //5. add elements to ArrayList
+        UsernameList.add("helpdesk29@cybertekschool.com");
+        UsernameList.add("helpdesk30@cybertekschool.com");
 
-            cor_UsernameList.add("marketing29@cybertekschool.com");
-            cor_UsernameList.add("marketing30@cybertekschool.com");
+        UsernameList.add("marketing29@cybertekschool.com");
+        UsernameList.add("marketing30@cybertekschool.com");
 
-            cor_UsernameList.add("hr29@cybertekschool.com");
-            cor_UsernameList.add("hr30@cybertekschool.com");
+        UsernameList.add("hr29@cybertekschool.com");
+        UsernameList.add("hr30@cybertekschool.com");
 
-        ArrayList<String> correctUsernameList = new ArrayList<>(cor_UsernameList);
+
+        System.out.println("Size of the UsernameList is : " + UsernameList.size() + " elements");
+        System.out.println("------------------------------------------------------");
 
         //2. ArrayList for Correct passwords
         ArrayList<String> cor_PasswordList = new ArrayList<>();
@@ -43,23 +46,26 @@ public class Login_Credentials {
     }
 
     /** 1. ArrayList with Correct usernames */
-    public static ArrayList useCorrectUsernames (){
-        //1.
-        ArrayList<String> cor_UsernameList = new ArrayList<>();
-            //2.
-            cor_UsernameList.add("helpdesk29@cybertekschool.com");
-            cor_UsernameList.add("helpdesk30@cybertekschool.com");
+    public static ArrayList<String> getCorrectUsernameList() {
+        //1.1.
+        ArrayList<String> UsernameList = new ArrayList<>();
 
-            cor_UsernameList.add("marketing29@cybertekschool.com");
-            cor_UsernameList.add("marketing30@cybertekschool.com");
+        //1.2. add elements to ArrayList
+        UsernameList.add("helpdesk29@cybertekschool.com");
+        UsernameList.add("helpdesk30@cybertekschool.com");
 
-            cor_UsernameList.add("hr29@cybertekschool.com");
-            cor_UsernameList.add("hr30@cybertekschool.com");
-        //3.
-        ArrayList<String> correctUsernameList = new ArrayList<>(cor_UsernameList);
-        //4.
-        return correctUsernameList;
+        UsernameList.add("marketing29@cybertekschool.com");
+        UsernameList.add("marketing30@cybertekschool.com");
+
+        UsernameList.add("hr29@cybertekschool.com");
+        UsernameList.add("hr30@cybertekschool.com");
+
+        //1.3.
+        System.out.println("Size of the UsernameList is : " + UsernameList.size() + " elements");
+        System.out.println("------------------------------------------------------");
+        return UsernameList;
     }
+
 
     /** 2. ArrayList with Correct passwords */
     public static ArrayList correctPasswords () {

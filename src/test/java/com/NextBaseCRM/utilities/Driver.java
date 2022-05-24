@@ -16,10 +16,9 @@ public class Driver {
 
 
 
-
-
     /** Quiting the Webdriver */
     public static void quit(WebDriver driver) {
+
         driver.quit();
     }
 
