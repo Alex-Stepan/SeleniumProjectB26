@@ -126,4 +126,23 @@ public class Utility {
         System.out.println("------------------------------------------------------");
     }
 
+    /** Verify Title on Get Password Page */
+    public static void getPasswordPage_TitleVerification(WebDriver driver) {
+        String act_Title = driver.getTitle();
+        String exp_Title = "Get Password";
+        if (act_Title.equals(exp_Title)){
+            System.out.println("Verification the Get Password page PASS");
+        } else {
+            System.out.println("Verification the Get Password page FAIL");
+        }
+        System.out.println("------------------------------------------------------");
+    }
+
+    /** Terminating Test */
+    public static void terminatingTest() {
+        System.out.println("------------------------------------------------------");
+        System.out.println("Testing is complete!");
+        System.out.println("======================================================");
+    }
+
 }

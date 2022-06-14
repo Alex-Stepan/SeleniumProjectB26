@@ -123,14 +123,13 @@ public class US001_TC01_TC02_TC03_Login_AllCorrect {
             System.out.println("List of the titles: " + titlesList);
 
         //9. reporting about termination of the Testing
-            System.out.println("------------------------------------------------------");
-            System.out.println("Testing is complete!");
-            System.out.println("======================================================");
+        Utility.terminatingTest();
 
         //10. Ext. quit()
         Driver.quit(driver);
 
     }
+
 
 
 
