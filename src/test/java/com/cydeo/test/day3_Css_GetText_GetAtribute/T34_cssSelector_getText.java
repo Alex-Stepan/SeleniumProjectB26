@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class T4_cssSelector_getText {
+public class T34_cssSelector_getText {
     /*
     TC #4: NextBaseCRM, locators, getText(), getAttribute() practice
         1- Open a chrome browser

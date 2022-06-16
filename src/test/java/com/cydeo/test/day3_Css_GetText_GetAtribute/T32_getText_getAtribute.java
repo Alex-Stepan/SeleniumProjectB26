@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class T2_getText_getAtribute {
+public class T32_getText_getAtribute {
 
     /*
     TC #5: getText() and getAttribute() method practice

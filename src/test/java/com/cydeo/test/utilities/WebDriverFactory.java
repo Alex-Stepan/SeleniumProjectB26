@@ -19,6 +19,21 @@ public class WebDriverFactory {
 
     /** Creating the Webdriver */
     public static WebDriver getDriver(String browserType){
+
+        if (browserType.equalsIgnoreCase("chrome")){
+            WebDriverManager.chromedriver().setup();
+            return new ChromeDriver();
+
+        } else if (browserType.equalsIgnoreCase("firefox")){
+            WebDriverManager.firefoxdriver().setup();
+            return new FirefoxDriver();
+
+        }else {
+            System.out.println("Given browser type does not exists");
+            System.out.println("driver is null!");
+            return null;
+        }
+
 //        //1. initialize scanner
 //        Scanner input = new Scanner(System.in);
 //
@@ -49,20 +64,6 @@ public class WebDriverFactory {
 //
 //        //6. returning
 //        return driver;
-
-        if (browserType.equalsIgnoreCase("chrome")){
-            WebDriverManager.chromedriver().setup();
-            return new ChromeDriver();
-
-        } else if (browserType.equalsIgnoreCase("firefox")){
-            WebDriverManager.firefoxdriver().setup();
-            return new FirefoxDriver();
-
-        }else {
-            System.out.println("Given browser type does not exists");
-            System.out.println("driver is null!");
-            return null;
-        }
 
 
     }

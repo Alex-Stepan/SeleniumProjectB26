@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class T1_xpath_css_isDisplayed {
+public class T41_xpath_css_isDisplayed {
 
     public static void main(String[] args) {
 
