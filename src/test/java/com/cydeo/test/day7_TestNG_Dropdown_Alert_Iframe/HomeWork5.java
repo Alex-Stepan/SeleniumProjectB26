@@ -17,9 +17,10 @@ public class HomeWork5 {
      * TC : Selecting date on dropdown and verifying
      *  1. Open Chrome browser
      *  2. Go to https://practice.cydeo.com/dropdown
-     *  3. Select “December 1st, 1923” and verify it is selected.
+     *  3. Select “December 1, 1923” and verify it is selected.
      *      Select year using : visible text
-     *      Select month using : value attribute Select day using : index number
+     *      Select month using : value attribute
+     *      Select day using : index number
      */
 
 
@@ -40,7 +41,7 @@ public class HomeWork5 {
         //2. Go to https://practice.cydeo.com/dropdown
         driver.get("https://practice.cydeo.com/dropdown");
 
-        //3. Select “December 1st, 1923” and verify it is selected.
+        //3. Select “December 1, 1923” and verify it is selected.
             Thread.sleep(1000);
 
             Select years = new Select(driver.findElement(By.xpath("//select[@id='year']")));
