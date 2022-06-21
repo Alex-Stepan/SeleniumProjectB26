@@ -1,18 +1,17 @@
-package com.cydeo.test.day8_Alert_IFrame;
+package com.cydeo.test.day8_Alert;
 
 import com.cydeo.test.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class T83_Locating_Dropdown {
+public class T84_HTML_Dropdown {
+
 
     // Integrate a global Webdriver
     WebDriver driver;
@@ -35,24 +34,17 @@ public class T83_Locating_Dropdown {
     }
 
     @Test
-    public void locatingDropdown(){
-        //identify the select element
-            WebElement dropdownElm = driver.findElement(By.id("dropdown") );
+    public void HtmlDropdown_Test(){
+        //Click to open dropdown which has no select tag
+            WebElement dropdownLink = driver.findElement(By.id("dropdownMenuLink"));
+            dropdownLink.click();
 
-        //wrap this element inside the Select object
-            Select selectObj = new Select(dropdownElm);
-
-        //use ready methods to select option
-            selectObj.selectByIndex(2);
-            selectObj.selectByValue("2");
-            selectObj.selectByVisibleText("Option 2");
-
-        //verify determined option is selected
-            String actOpt = selectObj.getFirstSelectedOption().getText();
-            String expOpt = "Option 2";
-
-            Assert.assertEquals(actOpt,expOpt, "Locating DropDown FAIL");
-
+        //click item (link) with text Yahoo
+            WebElement itemYahoo = driver.findElement(By.linkText("Yahoo"));
+            itemYahoo.click();
 
     }
+
+
+
 }

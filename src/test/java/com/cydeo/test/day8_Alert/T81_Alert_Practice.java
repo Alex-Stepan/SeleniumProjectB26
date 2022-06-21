@@ -1,4 +1,4 @@
-package com.cydeo.test.day8_Alert_IFrame;
+package com.cydeo.test.day8_Alert;
 
 import com.cydeo.base.TestBase;
 import org.openqa.selenium.Alert;
@@ -26,6 +26,7 @@ public class T81_Alert_Practice extends TestBase {
             System.out.println("resultText.isDisplayed() = " + resultText.isDisplayed());
 
     }
+
 
 
 

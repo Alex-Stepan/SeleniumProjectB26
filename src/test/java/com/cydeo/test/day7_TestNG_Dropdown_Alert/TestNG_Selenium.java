@@ -1,4 +1,4 @@
-package com.cydeo.test.day7_TestNG_Dropdown_Alert_Iframe;
+package com.cydeo.test.day7_TestNG_Dropdown_Alert;
 
 import com.cydeo.test.utilities.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
