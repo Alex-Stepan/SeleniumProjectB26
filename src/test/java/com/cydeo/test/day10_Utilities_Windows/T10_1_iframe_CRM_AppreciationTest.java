@@ -1,7 +1,7 @@
 package com.cydeo.test.day10_Utilities_Windows;
 
 import com.cydeo.base.TestBase;
-import com.cydeo.test.utilities.CRM_Utilities;
+import com.cydeo.test.utilities.CRM_Login_Utilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -28,7 +28,7 @@ public class T10_1_iframe_CRM_AppreciationTest extends TestBase {
             driver.get("https://login2.nextbasecrm.com/");
 
         //3- Login Homepage ( Login with valid username and password)
-            CRM_Utilities.crm_Login(driver, "hr1@cydeo.com", "UserUser");
+            CRM_Login_Utilities.crm_Login(driver, "hr1@cydeo.com", "UserUser");
 //            WebElement usernameBox = driver.findElement(By.xpath("//input[@name='USER_LOGIN']"));
 //                usernameBox.sendKeys("helpdesk30@cybertekschool.com");
 //
