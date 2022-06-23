@@ -60,8 +60,10 @@ public class CRM_Login_Utilities {
          */
 
         //3- Login Homepage ( Login with valid username and password)
-            WebElement inputUsernameBox = driver.findElement(By.xpath("//input[@name='USER_LOGIN']"));
-            inputUsernameBox.sendKeys(username);
+            //3.1. Enter valid username
+                WebElement inputUsernameBox = driver.findElement(By.xpath("//input[@name='USER_LOGIN']"));
+                inputUsernameBox.sendKeys(username);
+        //3.1. Enter valid username
 
             WebElement inputPasswordBox = driver.findElement(By.xpath("//input[@name='USER_PASSWORD']"));
             inputPasswordBox.sendKeys(password);
