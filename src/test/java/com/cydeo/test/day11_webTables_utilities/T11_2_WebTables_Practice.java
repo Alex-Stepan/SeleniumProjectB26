@@ -60,16 +60,18 @@ public class T11_2_WebTables_Practice extends TestBase {
             System.out.println("\tP10.getText() = " + P10.getText());
             System.out.println("P10.isDisplayed() = " + P10.isDisplayed());
 
-        //1- We can locate Jason, go to parent row, and come back in the same row to get "Due" cell
+            //1- We can locate Jason, go to parent row, and come back in the same row to get "Due" cell
+                //table[@id='table1']//tbody//td[.='Jason']/../td[4]
 
             //2- We can use the sibling method from xpath
-
+                //table[@id='table1']//tbody//td[.='Tim']/following-sibling::td[2]
 
         //P11_ WRITE A LOCATOR THAT RETURNS Tim's last name  BASED ON tim's NAME
-
-
+            //table[@id='table1']/tbody//td[.='Tim']/../td[1]
+            //table[@id='table1']/tbody//td[.='Tim']/preceding-sibling::td
 
         //P12_ WRITE A LOCATOR THAT RETURNS ALL EMAILS THAT HAS $50 DUE DATE
+            //table[@id='table1']/tbody//td[.='$50.00']/preceding-sibling::td[1]
 
 
 

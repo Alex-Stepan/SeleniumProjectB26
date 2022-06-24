@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class CRM_Login_Utilities {
+public class CRM_Utilities {
     /**
      * TC : Create utility methods for CRM_Utilities class
      *

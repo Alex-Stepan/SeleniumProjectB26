@@ -1,4 +1,4 @@
-package com.cydeo.test.day8_Alert;
+package com.cydeo.test.day8_Alerts;
 
 import com.cydeo.test.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
