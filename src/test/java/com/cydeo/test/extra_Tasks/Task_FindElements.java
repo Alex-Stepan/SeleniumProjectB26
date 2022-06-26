@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class WebLinksExtraTasks extends TestBase {
+public class Task_FindElements extends TestBase {
 
     /**
      * TC #1: Checking the number of links on the page
