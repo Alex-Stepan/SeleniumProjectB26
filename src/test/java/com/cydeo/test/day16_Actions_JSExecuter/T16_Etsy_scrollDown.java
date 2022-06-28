@@ -6,6 +6,7 @@ import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class T16_Etsy_scrollDown {
@@ -30,7 +31,7 @@ public class T16_Etsy_scrollDown {
             JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
             //window.scrollBy(x, y)
-            js.executeScript("window.scrollBy(0, 1000)");
+            //js.executeScript("window.scrollBy(0, 1000)");
 
         //3. Generate random email and enter into subscribe box
             WebElement email = Driver.getDriver().findElement(By.id("email-list-signup-email-input"));
@@ -45,10 +46,12 @@ public class T16_Etsy_scrollDown {
 
 
         //5. Verify "Great! We've sent you an email to confirm your subscription." is displayed
-//        String actMemo = Driver.getDriver().findElement().getText();
-//        String expMemo = "Great! We've sent you an email to confirm your subscription.";
-//
-//        Assert.assertEquals(actMemo, expMemo, "Memo is not matching - FAIL");
+        String actMemo = Driver.getDriver().findElement
+                (By.xpath("//div[@class='wt-alert wt-alert--inline wt-alert--success-01 wt-text-body-01']"))
+                .getText();
+        String expMemo = "Great! We've sent you an email to confirm your subscription.";
+
+        Assert.assertEquals(actMemo, expMemo, "Memo is not matching - FAIL");
 
         //close
         Driver.closeDriver();
